@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheat Notes - Code With Bhavya</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    
+</head>
+<body>
+    
+    <nav>
+        <div class="logo">
+            <i class="fas fa-code"></i> Code with Bhavya
+        </div>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="cheatnotes.html"><i class="fas fa-file-alt"></i> Cheat Notes</a></li>
+            <li><a href="courses.html"><i class="fas fa-play-circle"></i> Courses</a></li>
+            <li><a href="resources.html"><i class="fas fa-tools"></i> Resources</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+    
+    
+
+    <div class="container">
+        <i class="fas fa-clipboard"></i>Cheat Notes</h1>
+        
+        <!-- Cheat Sheet Boxes -->
+   
+<div class="cheatnote-container">
+    <div class="cheatnote-box" data-topic="html">
+        <img src="html.png" alt="HTML Logo">
+        <span>HTML</span>
+    </div>
+
+    <div class="cheatnote-box" data-topic="css">
+        <img src="css.png" alt="CSS Logo">
+        <span>CSS</span>
+    </div>
+
+    <div class="cheatnote-box" data-topic="javascript">
+        <img src="js.png" alt="JavaScript Logo">
+        <span>JavaScript</span>
+    </div>
+
+    <div class="cheatnote-box" data-topic="python">
+        <img src="python.png" alt="Python Logo">
+        <span>Python</span>
+    </div>
+    <div class="cheatnote-box" data-topic="SQL Database">
+        <img src="data:image/png;base64,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" alt="Python Logo">
+        <span>SQL Database</span>
+    </div>
+
+</div>
+
+
+
+<!-- Content Display Area -->
+<div id="text-area">
+    <p>Your Content Will Be Display here</p>
+</div>
+<br>
+<br><br><br>
+
+<div id="content-container" style="display: none;">
+    <div class="topic-content" id="html">
+        <pre >
+            <h3>Introduction</h3>
+            <p></p> Introduction
+            <p>Today, I'm writing this tutorial to create a resource that will help you learn HTML in less than 30 days. Here's a recommended timeline for learning HTML, based on your educational background:
+        
+        <ul>
+        
+        <li> School students and younger: Around 25 days</li>
+        <li>   Those beyond High School: Around 20 days</li>
+        <li>College students and above: Around 10-20 days</li>
+        </ul>
+        
+        <p> You may be wondering why I'm discussing these timelines. It's important for me to set expectations before you start your journey of learning html with me.
+        </p>
+        <p> My name is Bhavya (the same CodeWithBhavya guy from YouTube), and today I'm writing this comprehensive HTML tutorial for all of you. Let's jump right into HTML! 
+        </p>
+        
+        <h4>Q.Why the Term HyperText & Markup Language?</h4>
+        
+        <p> term 'Hypertext Markup Language' is composed of two main words: 'hypertext' and 'markup language.'<br>
+             'Hypertext' refers to the linking of text with other documents, while 'markup language' denotes a language that utilizes a specific set of tags.
+        </p>
+        <p>Thus, HTML is the practice of displaying text, graphics, audio, video etc. in a certain way using special tags.
+        </p>
+        <p style="color: red;">Note: Tags are meaningful texts enclosed in angle braces, like '<...>'. For example, the <code>&lt;head&gt;</code> tag. Each tag has a unique meaning and significance in building an HTML page, and it can influence the web page in various ways.
+        </p>
+        
+        <p>
+            Beautiful analogy to understand HTML, CSS, and JavaScript:
+        cwh tutorial 
+        
+        In building a webpage, think of HTML, CSS, and JavaScript as different parts of a car. 
+        HTML is like the car's skeleton, forming the basic structure and frame.
+         CSS adds the paint and finishing touches, making the car look appealing with color, style, and design.
+          JavaScript is similar to the engine and mechanical parts, infusing the car with functionality, movement, and interactive features. Similarly, when developing a website, HTML lays out the structure, CSS enhances its visual appeal, and
+           JavaScript provides interactivity and dynamic content
+          
+        </p>
+        
+        
+        <img src="https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/tutorial/html-home/html-car-example.png" style="width: 850px; height: 500px;">
+        
+
+        <p>History of HTML:</p>
+<p>In 1989, Tim Berners-Lee established the World Wide Web (www), and in 1991, he created the first version of HTML.
+From 1995 to 1997, further work was done to develop and refine different versions of HTML.
+In 1999, a committee was organized that standardized HTML 4.0, a version still used by many today.
+The latest and most stable version of HTML is 5, also known as HTML5.
+Feel free to read more history of HTML here on the HTML Wikipedia page but I will move ahead and cover important aspects of HTML.
+</p>
+<p>In the next tutorial, we'll continue our journey and understand how websites work</p>
+        </pre>
+
+        <pre>
+            <h3>Basic Structure</h3>
+            <p>An HTML document consists of the following structure:</p>
+              <code>&lt;!DOCTYPE html&gt;</code><br>
+                <code> &lt;html&gt;</code><br>
+                <code>&lt;head&gt;</code><br>
+                    <code> &lt;title&gt;My Webpage&lt;/title&gt;</code><br>
+                        <code>&lt;/head&gt;</code><br>
+                            <code>&lt;body&gt;</code><br>
+                                <code> &lt;h1&gt;Hello World&lt;/h1&gt;</code><br>
+                    <code>&lt;/body&gt;</code><br>
+                        <code> &lt;/html&gt;</code><br>
+                        </pre>
+        
+                        <pre>
+                             <h3>HTML Elements</h3>
+            <p>Elements define the structure of an HTML page. Example:</p>
+            
+            <code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code>
+            <code> &lt;a href="https://example.com"&gt;Click here&lt;/a&gt;</code>
+            <code> &lt;img src="image.jpg" alt="Description"&gt;</code>
+            </pre>
+
+            <h3>Headings</h3>
+            <p>HTML provides six levels of headings, from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>:</p>
+            <pre>
+            &lt;h1&gt;Main Heading&lt;/h1&gt;
+            &lt;h2&gt;Subheading&lt;/h2&gt;
+            &lt;h3&gt;Smaller Subheading&lt;/h3&gt;
+            </pre>
+        
+            <h3>Paragraphs and Line Breaks</h3>
+            <p>Paragraphs are created using the <code>&lt;p&gt;</code> tag. Use <code>&lt;br&gt;</code> for line breaks.</p>
+            <pre>
+            &lt;p&gt;This is a paragraph.&lt;/p&gt;
+            This is a line break &lt;br&gt; Here is the next line.
+            </pre>
+        
+            <h3>Links and Anchors</h3>
+            <p>Use the <code>&lt;a&gt;</code> tag to create hyperlinks.</p>
+            <pre>
+            &lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;
+            </pre>
+        
+            <h3>Images</h3>
+            <p>Use the <code>&lt;img&gt;</code> tag to insert images:</p>
+            <pre>
+            &lt;img src="image.jpg" alt="An example image"&gt;
+            </pre>
+        
+            <h3>Lists</h3>
+            <p>HTML supports ordered and unordered lists:</p>
+            <pre>
+            &lt;ul&gt;
+                &lt;li&gt;Item 1&lt;/li&gt;
+                &lt;li&gt;Item 2&lt;/li&gt;
+            &lt;/ul&gt;
+        
+            &lt;ol&gt;
+                &lt;li&gt;First&lt;/li&gt;
+                &lt;li&gt;Second&lt;/li&gt;
+            &lt;/ol&gt;
+            </pre>
+        
+            <h3>Tables</h3>
+            <p>Tables are created using <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, and <code>&lt;td&gt;</code> tags:</p>
+            <pre>
+            &lt;table border="1"&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Name&lt;/th&gt;
+                    &lt;th&gt;Age&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Alice&lt;/td&gt;
+                    &lt;td&gt;25&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+            </pre>
+        
+            <h3>Forms and Input</h3>
+            <p>Forms allow user input with various fields:</p>
+            <pre>
+            &lt;form action="submit.php" method="POST"&gt;
+                &lt;label&gt;Name: &lt;input type="text" name="name"&gt;&lt;/label&gt;
+                &lt;button type="submit"&gt;Submit&lt;/button&gt;
+            &lt;/form&gt;
+            </pre>
+        
+            <h3>Div and Span</h3>
+            <p><code>&lt;div&gt;</code> is a block container, while <code>&lt;span&gt;</code> is inline:</p>
+            <pre>
+            &lt;div style="background:lightgray"&gt;Block container&lt;/div&gt;
+            &lt;span style="color:red"&gt;Inline text&lt;/span&gt;
+            </pre>
+        
+            <h3>Semantic HTML</h3>
+            <p>Use semantic tags for better readability:</p>
+            <pre>
+            &lt;header&gt;Page Header&lt;/header&gt;
+            &lt;nav&gt;Navigation&lt;/nav&gt;
+            &lt;article&gt;Main Content&lt;/article&gt;
+            &lt;footer&gt;Footer Content&lt;/footer&gt;
+            </pre>
+        
+            <h3>Meta Tags</h3>
+            <p>Meta tags provide metadata:</p>
+            <pre>
+            &lt;meta name="description" content="Best HTML Guide"&gt;
+            </pre>
+        
+            <h3>HTML5 Features</h3>
+            <p>New elements include <code>&lt;audio&gt;</code>, <code>&lt;video&gt;</code>, and <code>&lt;canvas&gt;</code>:</p>
+            <pre>
+            &lt;video controls&gt;
+                &lt;source src="video.mp4" type="video/mp4"&gt;
+            &lt;/video&gt;
+            </pre>
+        
+            <h3>HTML Entities</h3>
+            <p>Special characters can be represented using entities:</p>
+            <pre>
+            &amp;lt; = &lt;  (Less Than)
+            &amp;gt; = &gt;  (Greater Than)
+            &amp;amp; = &amp;  (Ampersand)
+            </pre>
+        
+            <h3>Iframe</h3>
+            <p>Embeds another webpage inside a page:</p>
+            <pre>
+            &lt;iframe src="https://example.com"&gt;&lt;/iframe&gt;
+            </pre>
+        
+            <h3>SVG and Canvas</h3>
+            <p>SVG and Canvas are used for graphics:</p>
+            <pre>
+            &lt;canvas width="200" height="100"&gt;&lt;/canvas&gt;
+            </pre>
+        
+            <h3>Accessibility</h3>
+            <p>Use ARIA attributes and alt text for accessibility:</p>
+            <pre>
+            &lt;button aria-label="Submit form"&gt;Submit&lt;/button&gt;
+            </pre>
+
+
+    </div>
+    <div class="topic-content" id="css">
+        <h3>Information & History</h3>
+       <p> Let's start this journey of learning CSS together. I'm Harry, the same guy from the CodeWithHarry YouTube channel. This tutorial will serve as a resource for students to learn CSS and use the code from these lessons as a reference.
+         Without further ado, let's dive into learning CSS.</p>
+        
+        <p></p>What is CSS?
+        <p> CSS stands for Cascading Style Sheets. It is a stylesheet language that is used to describe the visual presentation of a web page written in HTML (Hypertext Markup Language).
+        </p>
+            <p>HTML creates the structure of the page, while CSS adds styling to that structure. This tutorial assumes that you have prior knowledge of HTML. If that's not the case, you can follow the HTML tutorial first.
+            </p>
+        <p>Why the word "cascade"?
+        The term "cascade" refers to the priority scheme determining which CSS rules are applied when multiple rules target an element. This scheme takes into account specificity and inheritance, ensuring that the most specific and latest rules are applied.
+    </p>
+         <p>Why use CSS?
+         CSS is used to provide styling to HTML elements, making web pages visually appealing and user-friendly.
+        Consider the video below to understand how CSS can transform a webpage:</p>
+        
+        
+        Let us take this HTML page for example. Here is how it looks without CSS </p>
+        <img src="" style="width: 850px; height: 500px;">
+        cwh tutorial image
+        
+        This is how it looks after adding CSS
+        
+        cwh tutorial image
+        
+        Analogy to Understand CSS
+        Imagine reading a book with only plain text. It's quite dull, isn't it? Now picture a book enriched with different colors, fonts, and styles. That's what CSS does to a webpage.
+        
+        How does CSS work?
+        CSS operates by selecting HTML elements and applying styles to them. Styles dictate the appearance of elements on a webpage. You can target HTML elements, classes, or IDs, defining properties like colors, fonts, margins, etc.
+        
+        /* Example of a CSS rule */
+        selector {
+            property: value;
+        }
+        Quick Follow-Up Task:
+        Right-click on the screen and select "Inspect" or press (Ctrl + Shift + C).
+        Click on the arrow icon in the top-left corner of the inspection pane.
+        Select elements on the page to toggle the CSS rules.
+        Key Features of CSS:
+        Styles and layouts of web pages.
+        Works alongside HTML and XML documents.
+        Enables responsive design for different screen sizes.
+        Supports interactive effects like hover states and animations.
+        CSS is now modularized, with ongoing updates rather than version numbers.
+        Allows reusability of the same rules across multiple HTML documents.
+        A Bit of History
+        CSS was created by Håkon Wium Lie to enhance the visual aspects of websites. Initially, websites were mainly used by researchers and lacked visual appeal. As websites became more widespread, the need for better design grew.
+        
+        Important References:
+        For beginners, start with the HTML tutorial.
+        For more insights, check out CSS on Wikipedia.
+        For advanced users, the W3C CSS Specifications is a valuable resource.
+    </div>
+    <div class="topic-content" id="javascript">
+        <h2>JavaScript Basics</h2>
+        <p>JavaScript is a scripting language for the web.</p>
+        <h3>JavaScript Functions</h3>
+        <p>Functions allow you to reuse code.</p>
+    </div>
+    <div class="topic-content" id="python">
+        <h2>Python Basics</h2>
+        <p>Python is a high-level programming language.</p>
+        <h3>Python Variables</h3>
+        <p>Variables store data values.</p>
+    </div>
+    <div class="topic-content" id="SQL Database">
+       <h2 style="color: red;">No Data Found.Error 404</h2>
+    </div>
+
+</div>
+
+        <!-- Sidebar for Topics -->
+
+  <!-- Sidebar -->
+<div id="sidebar">
+    <button id="close-sidebar">X</button>
+    <ul id="topic-list"></ul> <!-- Topics will load here -->
+</div>
+
+ 
+
+    <footer>
+        &copy; 2025 Code with Bhavya | All Rights Reserved
+    </footer>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
+

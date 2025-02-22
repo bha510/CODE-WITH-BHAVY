@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheat Notes</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+      <!-- Navbar -->
+<nav>
+    <div class="logo">
+        <i class="fas fa-code"></i> Code with Bhavya
+    </div>
+    <ul>
+        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="cheatnotes.html"><i class="fas fa-file-alt"></i> Cheat Notes</a></li>
+        <li><a href="#"><i class="fas fa-play-circle"></i> Courses</a></li>
+        <li><a href="#"><i class="fas fa-tools"></i> Resources</a></li>
+        <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+</nav>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Cheat Notes</h2>
+        <ul class="menu">
+            <li><a href="#" onclick="loadContent('html')">HTML</a></li>
+            <li><a href="#" onclick="loadContent('css')">CSS</a></li>
+            <li><a href="#" onclick="loadContent('js')">JavaScript</a></li>
+            <li><a href="#" onclick="loadContent('python')">Python</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1 id="title">Welcome to Cheat Notes</h1>
+        <div id="cheatnotes-content">
+            <p>Select a topic from the sidebar.</p>
+        </div>
+    </div>
+<script src="js/script.js"></script>
+</body>
+</html>

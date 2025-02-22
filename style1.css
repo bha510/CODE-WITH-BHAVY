@@ -1,0 +1,243 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+
+/* Sidebar Styling */
+#sidebar {
+    position: fixed;
+    left: -300px; /* Initially hidden */
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background: darkcyan; /* Royal Blue + Purple */
+    color: white;
+    transition: 0.4s ease-in-out;
+    padding: 20px;
+    box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.4);
+    font-family: 'Poppins', sans-serif;
+    overflow-y: auto;
+    z-index: 1000;
+    border-right: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+#sidebar.open {
+    left: 0; /* Slide in effect */
+}
+
+/* Close Button */
+#close-sidebar {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+#close-sidebar:hover {
+    background: #e11d48; /* Darker Pink */
+}
+
+/* Sidebar Heading */
+#sidebar h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* Topic List */
+#topic-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#topic-list li {
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+#topic-list li:hover {
+    background: #e11d48; /* Darker Pink */
+    transform: scale(1.05);
+    color: black;
+}
+
+/* Main Content Styling */
+#text-area {
+    margin-left: 300px; /* Adjust for sidebar */
+    padding: 30px;
+    font-size: 22px;
+    line-height: 1.6;
+    background: #f0f4f8; /* Light Gray */
+    color: #333;
+    border: 10px solid darkcyan;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+    text-align: left;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    #sidebar {
+        width: 250px;
+    }
+    
+    #text-area {
+        margin-left: 0;
+        width: 90%;
+    }
+}
+
+
+
+footer {
+    padding: 15px;
+    background-color: darkcyan;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkcyan;
+    padding: 15px 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Logo */
+
+/* Navbar */
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkcyan;
+    padding: 15px 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Logo */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    
+}
+
+.logo i {
+    margin-right: 250px;
+}
+
+/* Navbar Links */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a i {
+    margin-right: 8px;
+}
+
+nav ul li a:hover {
+    color: yellow;
+}
+
+.logo .fas {
+    margin-right: 240px;
+
+}
+
+.cheatnote-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 2 columns */
+    grid-gap: 20px; /* Space between boxes */
+    justify-content: center;
+    align-items: center;
+    max-width: 400px; /* Adjust as needed */
+    margin: 20px auto;
+    
+}
+
+.cheatnote-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 40px;
+    border: 10px solid darkcyan;
+}
+
+.cheatnote-box:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cheatnote-box img {
+    width: 180px;  /* Adjust size */
+    height: 180px;
+    margin-bottom: 10px;
+}
+
+.cheatnote-box span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}

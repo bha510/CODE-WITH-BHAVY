@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources | Vidhya</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <i class="fas fa-code"></i> Code with Bhavya
+        </div>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="cheatnotes.html"><i class="fas fa-file-alt"></i> Cheat Notes</a></li>
+            <li><a href="courses.html"><i class="fas fa-play-circle"></i> Courses</a></li>
+            <li><a href="resources.html"><i class="fas fa-tools"></i> Resources</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+    
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+        <button id="close-sidebar" onclick="closeSidebar()">Close</button>
+        <h2 id="resource-title">>Select a Resource</h2>
+        <ul id="topic-list"></ul>
+    </aside>
+
+  
+
+    <!-- Resource Boxes -->
+    <div class="resource-boxes">
+        <div class="resource-box" onclick="openResource('HTML')">
+            <img src="html.png" alt="HTML Logo">
+            <h3>HTML Resources</h3>
+           
+        </div>
+        <div class="resource-box" onclick="openResource('CSS')">
+            <img src="css.png" alt="HTML Logo">
+            <h3>CSS Resources</h3>
+            
+        </div>
+        <div class="resource-box" onclick="openResource('JavaScript')">
+            <img src="js.png" alt="HTML Logo">
+            <h3>JavaScript Resources</h3>
+    </div>
+            <div class="resource-box" onclick="openResource('Web')">
+                <img src="https://media.istockphoto.com/id/691423398/vector/winding-road-on-a-white-isolated-background-with-pin-pointers.
+                jpg?s=612x612&w=0&k=20&c=PaRJPzxTEMgSc09prPpitCxGPMUcqMtwPSV4FxNfrGw=" alt="HTML Logo">
+                <h3>Full Stack Web development</h3>
+            
+        </div>
+    </div>
+
+  <!-- Main Content -->
+  <section id="resource-container">
+    <h2 id="resource-heading"><i class=" fa-solid fa-eye"></i>Select a topic to view the PDF</h2>
+    <iframe id="resource-frame" width="800" height="500" src="" frameborder="0"></iframe>
+</section>
+
+
+
+    <script>
+        const resources = {
+            "HTML": {
+                title: "HTML Resources",
+                topics: {
+                    "HTML and CSS Complete Refernece": "html .pdf",
+                    
+                }
+            },
+            "CSS": {
+                title: "CSS Resources",
+                topics: {
+                    "CSS Basics": "css.pdf",
+                    
+                }
+            },
+            "JavaScript": {
+                title: "JavaScript Resources",
+                topics: {
+                    "JavaScript Begginers to proffesional": "javascript.pdf",
+                    
+                }
+            },
+            "Web": {
+                title: "Web Development",
+                topics: {
+                    "Full Stack Web Development Road Map": "roadmap.pdf",
+                    
+                }
+            }
+        };
+
+        function openResource(category) {
+            document.getElementById("sidebar").classList.add("open");
+            document.getElementById("resource-title").innerHTML = `<i class="fas fa-folder-open"></i> ${resources[category].title}`;
+
+            let topicList = document.getElementById("topic-list");
+            topicList.innerHTML = "";
+            for (let topic in resources[category].topics) {
+                let li = document.createElement("li");
+                li.innerHTML = `<i class="fas fa-file-pdf"></i> ${topic}`;
+                li.onclick = () => loadResource(category, topic);
+                topicList.appendChild(li);
+            }
+        }
+
+        function loadResource(category, topic) {
+            let resourceLink = resources[category].topics[topic];
+            document.getElementById("resource-frame").src = resourceLink;
+            document.getElementById("resource-heading").innerHTML = `📂 Viewing: ${topic}`;
+        }
+
+        function closeSidebar() {
+            document.getElementById("sidebar").classList.remove("open");
+        }
+    </script>
+
+</body>
+</html>

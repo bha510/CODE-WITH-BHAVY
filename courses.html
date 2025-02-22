@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+
+    <!-- Google Icons & FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+      <!-- Navbar -->
+<nav>
+    <div class="logo">
+        <i class="fas fa-code"></i> Code with Bhavya
+    </div>
+    <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="cheatnotes.html"><i class="fas fa-file-alt"></i> Cheat Notes</a></li>
+        <li><a href="courses.html"><i class="fas fa-play-circle"></i> Courses</a></li>
+        <li><a href="resources.html"><i class="fas fa-tools"></i> Resources</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+</nav>
+
+
+    <div class="container">
+        <!-- Sidebar (Initially Hidden) -->
+        <aside id="sidebar" class="hidden">
+            
+            <h2 id="course-title"><i class="fas fa-book-open"></i> Topics</h2>
+            <button class="close-btn" onclick="closeSidebar()">Close</button>
+            <ul id="topic-list"></ul>
+            
+        </aside>
+
+        <!-- Course Selection Boxes -->
+        <main id="content">
+            <h2 class="h2"><i class="fas fa-play-circle"> Select a Course</i></h2>
+            
+            <div class="course-container">
+                <div class="course-box" onclick="openCourse('html')">
+                 <img src="html.png">
+                    <h3>HTML & CSS</h3>
+                </div>
+                <div class="course-box" onclick="openCourse('javascript')">
+                    <img src="js.png">
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="course-box" onclick="openCourse('python')">
+                    <img src="python.png">
+                    <h3>Python</h3>
+                </div>
+                <div class="course-box" onclick="openCourse('sql')">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAyVBMVEX///8AcsYmh8+41DJ/ugCNst4NccYghc4Md8iTvOMAbsUti9HM4fLZ6PVEktMWgs3y+f2QwRSx0CwAasNjodnG3vLk8vpLmtcAZ8Iyd8cmfcrg7Pe20iJ4twAAWb6s0Oz3+vDj7r6bxh3w9uHp8tTq88/M4Ia710L2+uqwzwDd66+82E6myelzptq41e5/st7Z6aXU5pm/2V3I3nWiy2O01YiOwjvJ4aCPwyu92ZKw1GylzlgAYcHb6sO924Kozm6nv+NWiM1hlNJEVesTAAALuUlEQVR4nO2di3abOBCGA24QNwNdrhVJbTdO7DhcErtN0sbptnn/h1oJfBEgbMBgnCz/Od09xUD1eaRhRhrks7NO/xsNI03H10ijlPCx8TQ+o+127tH0ajwej+4fbpAWd5NJr9e7uLi9QH+i/1xcoAOTyd0Cf/5wP0InX03bbnNWyBDXo9lsMb+7u5tggkg9qjYfTtDJ88VsNrqenoyZkDnusSHirz8PIRcLXYVNdX81bt1IV7P7xXzeK8VAperN54v72VVrIMOrm3ncqQ4B2QKhjjdf3LRin/Hs7lCDUIkm89n4yCizxaReDFKTxfXxSK5u0KhtjgUZ6Pb25jjD5+qmd9skSazb3kPzo2f6MGnUKBtdXExmDeOM5kewyhrndj5qEGU4O5JZ1jiT0bAplunDMUlimvuGaIb3dT9WCtD0Zs3AXB+3j61o5o346OFNCyyI5mHYAMx43g7MogkHfd0GCvYBTcQ213ftWOauCZjp4h13M01L/n340ApML+0A0u0qBtNPXVXeA/xDUclbZFxzplnF5KWvmvUK0EQt/hbrM0WrjwqCXfTS4ZnmVWE58+XUgZ2hWcwQtfdTIa3RdkFd3M2GqUbI59Vg/MyhEZ0Gc6wgLouRxLpcQeUBoUAz04SwGsw5Y2aOjReZHBOZowxArqG+fUuj3N5kZwNkVqgGI0Ire3Q02eIgg9TBsdW3rYUuqE9LTVIrwnCOTTk8nN1FOP/UY5G0UJ+LrHJHDZd9WNUyHONQr0Q4PURSangU1yXi6WUHfiQBspVhOE4M6V59/OP7YzM0l58ev/+gz5xpAgAHwDAc51PGDdb09ff350+XtQJdRiSvOfGLG2KWA2AQjWHmPXKHoydkoOdaLITu8RmBPL0O85pj+pgFHALDcDr8k2McrKvXp9//Pn6+vKxuI3zt8+O/v2evO5JKy1NUbJfDYBhG5P3sA4fQdPo6e/oZ9blySJfxBc+/np7wGs2uf8P0JZVla4BhOBGGO4wTaTgdj8fISt9fUL/bjbX68Pnx5fvvp1d02W6OMzzypWi41AGDaDhJ2IcTMw2n0/Ho/unnzx+/Xl4eHx+fN6EaClueHx9fXl5+/fj582n2Op4WXDCzPENdobCHOYDSOBshrOkV1nil6C/o4LDUbSzBBgTL4ZaJcRzHlyvlEtWlyaEKSbPUBIN5HNHw0nlBg5I9X02Q1AkT4SDX5h7BPpplhoqqslnVBoMdtbOEYdCvlIkXlKa5gaDwEFBQarTMmodRfM+slozvk9aXvdBgqUZpAgZ7A5GBiv/Hk2u1kCYHCESRMiOlUZiYx3GYv35Yj4msvukJvo0sgkByUZqCWROJPFSMc2FglnsKEcL2EHxkkNy+1ZgDyPBgII7hIfz7FgqmpWkFex46zzJRr7IVhMGiByPYYZBjWGYDFCGJ6H9foGQboTAIgsA05b7rWhZudiTLcvt92TSDYOAJoW9vIQpxHAkmTaXrjo6txfPo8S1JrGKvJCGh9qsQqnhwFDNGWzBpMkaMxKkrAVAFIKl2YLbiD2w/obYs08F0MO8VpnMAHUwHU1YfCOZDWaaD6WCOANM5gA6mg/kfw3QOoIPpYMrqA8F8KMt0MB3MEWA6B9DBdDBl9YFgPpRlOpiaYaQThxFFZ7n8Gmm5jFaXc8SJHOT5mIqHuXULQN0u4+7CqR+G03WohIHsYmnB4NxmeUenV0GJUBEGsmtZlmsGgiHl1GFs1tdtRcqnacAyuqN4qfISzRTeKOc7oj9InukOQj6LA6RthW5fOSIMpyvU2mDrS7p0UHSoZbeuDdNdCUjbEsNjwogw8wJXLC0Jw4kwr/b+zLRTVVhFYWoeMyIIci5IWoYTpUH+zfthcmC0YxkR5rEkYfBLBLvurnkJmnZgnPyvOwljuLtvn6RpBUZX8i8gYXSlv+/+mkCU/LUBw3GJumZN9pCCVV0jASOCvSzo6lBtFUY3yDMGBnq0o6f637cQv2RDwCxT48U1B56QqebUth2tDW8mkrcacFHxHy6XY6AyIFzzMsF8ZoUGrppjJTtMFqx7fIuWEXniGw8Qw7b7iboyWMOIMDH4PX5dNYfiLyFhHENtEYZs5bmT6oIbNjHx/nHoMMRAh4lX8uT1s7MNGEC0xHfSH6/PUsnRLyzFRD4DE7ax1XIwNY4ZUSoC45DNDRwulZyp5FM34FvsZkSw5VFDfhyHEqNcU8R0pqkaBKsG24PhiQ5k2Q49eFOIgeXhgZSEAWRApK1cQAswHEd2kb5C+LOt9HPim/+bhWFV8pVpD7YFw+gheUb/nM8ah+MJXyZH3joFA8jOGpSzTK0PTTWRoWimz6dHjsgSzyKBo8CwkAhW5bjlrQSa6ffQtcBI9TX9bTuuNJ8KQ77T78aDphUYTk9nmVrAfyVxRCL2t+zoFhkYYkOLVbTZUnJGyQEGLGEdkciVZYUOQzjnkjB1p81+dgZAE/jNvBlHxCv9PJgtb6uWQbk9heYsUFZncySMHHnmDAywtz2xXRhEY1DePHV95j3CoPYqlMkmN/ZcXJFuZp9KN2PiGbEgg2P52AwcQ8z75Y4ZwgH4bTqA2As4fJjZjsJSIxrCm7k2tZuRrtlq8TmzxeFAZjMnDycFIumqch6aRFDk2icAg9/R/OIn52A0VsQRAJmNMlQYIpwxpfbCmQQOJ7JJTyAsU7FZQAs0WZ4I8Mz2ouZMZxMTc+OBjj0AOQPwhZICAInkLwfT6Goz95V8hMo8artD5jMCBYYnk7PV1NkpWAanL0TTIhiRJdNRkE2bFRKfWVurjag5c4xMCiLnzOlkOjpAMWgCBrDkx0J7cwAcNPh0puwQW8FZEH/qkDMWZ+cOR8KAxAZl1nqCto2pJih7XCpTJi0j81FEA8mZZssnJwFVNTEJKLQ5CQjds8DgyWVyHRKPziA2m56Iq60/660XgKraiYXdjWFSMKvp3K2agjmzEI6jr/qdzpGOWIjnBTkxubomCwbAqwWSISSDBmGzppGAsdMsxGpB7XPNluwpy6/LJfqT3DDM1tfnJW+lWbKJJKc2eQm2q00kjNY3k+qv3URDE+eapqH2ucldGfqbmRrHoNwwrb5NX2zKarBZ+qjVAexcqFS2nk7fv92laxC1DUVhmlrSyP6ThGNAOdqe21s+WQpwajADSJ4vigJlqmCrvp+oOTkxmEBKns8xmXxnKy1IlWi0MmbyFpFdAaaLtDhR8ejsmilIO8pNdsHUGc7wPnXvRjd4oywIoIfQW5DFQShKZv+iFmCiqYw/KR7LPH/LmGWNAw0hja+FtDJHydTy5TUCg2gYHr7hHZoiDYTw7Q0y1HWauGOKDHjzvYFJpgVUGtvIl9JEBLDiEUWOh5F49OWL+RWN8ek6w0oSWaKmGTALo+4Qyd7ILlpr7QJZiccVACwRYVohhaaQTqF6Fn/zCkGjCdR95d4NTGqVWdhRVfoOYFiVTHNSxXPFdSIwIJllejuz41O3DP5aSdsEFWhOCAZIiRlQUymyb96pwiCXlkioTbsszSnBsMBOhKpyeducEgxQ+mTU1S/p007KMrin2aTeNwybNyX2LmEO1AeC+VCW6WA6mCPAdA6gg+lgyuoDwXwoy3QwHcwRYDoH0MF0MCVhQDUYjzlFGKnaL52a6b0KTgOmwHvGNP3NXdxrD0YtUsdCk1fXoKkPBuTurLBP2rpI6XRgVNobIsXUB/XQ1Aaj7t9lIF9BznulLcEAdedOFvskOHU4gZpgQMUf011L85gaaOqBUaWcLWKKa8AfPm5qgUmtU1WTCeivMB8XBkClll8l1EJmd0FJ8zBAlXaX4pVQoOypj2kWBgDVqKGLraX5kDsA5yAYAFgl59ejq8o8Z6t3tgNggMraQi2jhRSu39P1an66MgxQVcNr5OdVNfmPweeXydUPowLF9w6IX/bIGvgsfbe8+mFU4AvVfz2xkDTZM/Tlju0M64BB7osHYWAd4+dh3cCAYpmgrRQM3rVROQ7JSvhHYpnC9ikBAyBrVO5d/wFGQpu3HgF3pQAAAABJRU5ErkJggg==">
+                    <h3>SQL & Databases</h3>
+                </div>
+            </div>
+<br><br>
+            <!-- Video Display Area -->
+            <section id="video-container">
+                <h2 id="video-title"> <i class="fas fa-question-circle">Select a topic to watch the video</i></h2>
+                <iframe id="course-video" width="800" height="450" src="" frameborder="0" allowfullscreen></iframe>
+            </section>
+            
+        </main>
+    </div>
+
+    <footer>
+        &copy; 2025 Courses by Bhavya Tamboli. All rights reserved.
+    </footer>
+
+    <script>
+        // Course Topics Data
+        const courses = {
+            "html": {
+                "title": "HTML & CSS",
+                "topics": {
+                    "Introduction": "https://www.youtube.com/embed/mU6anWqZJcc",
+                    "CSS Basics": "https://www.youtube.com/embed/1Rs2ND1ryYc",
+                    "Flexbox & Grid": "https://www.youtube.com/embed/0xMQfnTU6oo"
+                }
+            },
+            "javascript": {
+                "title": "JavaScript",
+                "topics": {
+                    "Introduction": "https://www.youtube.com/embed/hdI2bqOjy3c",
+                    "DOM Manipulation": "https://www.youtube.com/embed/wiozYyXQEVk",
+                    "Async JS": "https://www.youtube.com/embed/PoRJizFvM7s"
+                }
+            },
+            "python": {
+                "title": "Python",
+                "topics": {
+                    "Introduction": "https://www.youtube.com/embed/rfscVS0vtbw",
+                    "Functions": "https://www.youtube.com/embed/9Os0o3wzS_I",
+                    "OOP in Python": "https://www.youtube.com/embed/JeznW_7DlB0"
+                }
+            },
+            "sql": {
+                "title": "SQL & Databases",
+                "topics": {
+                    "Introduction": "https://www.youtube.com/embed/7S_tz1z_5bA",
+                    "Joins & Queries": "https://www.youtube.com/embed/HXV3zeQKqGY",
+                    "Advanced SQL": "https://www.youtube.com/embed/zbMHLJ0dY4w"
+                }
+            }
+        };
+
+        function openCourse(course) {
+    document.getElementById("sidebar").classList.add("open");
+    document.getElementById("course-title").innerHTML = `<i class="fas fa-book-open"></i> ${courses[course].title}`;
+
+    let topicList = document.getElementById("topic-list");
+    topicList.innerHTML = "";
+    for (let topic in courses[course].topics) {
+        let li = document.createElement("li");
+        li.innerHTML = `<i class="fas fa-play-circle"></i> ${topic}`;
+        li.onclick = () => loadVideo(course, topic);
+        topicList.appendChild(li);
+    }
+}
+
+function loadVideo(course, topic) {
+    let videoSrc = courses[course].topics[topic];
+    document.getElementById("course-video").src = videoSrc;
+    document.getElementById("video-title").innerHTML = `📺 Now Playing: ${topic}`;
+}
+
+function closeSidebar() {
+    document.getElementById("sidebar").classList.remove("open");
+}
+
+    </script>
+
+</body>
+</html>
